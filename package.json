@@ -1,0 +1,56 @@
+{
+	"name": "words",
+	"main": "words",
+	"version": "1.0.0",
+	"description": "words",
+	"license": "MIT",
+	"repository": "F1LT3R/words",
+	"author": {
+		"name": "F1LT3R",
+		"email": "al@pwn.io",
+		"url": "https://f1lt3r.io"
+	},
+	"scripts": {
+		"test": "xo && yarn run cover",
+		"unit": "ava",
+		"watch": "ava --watch --verbose",
+		"cover": "nyc --reporter=lcov --reporter=html --reporter=text ava ./lib/**/*.test.js",
+		"coveralls": "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls -v"
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "yarn test"
+		}
+	},
+	"files": [
+		"index.js"
+	],
+	"keywords": [],
+	"dependencies": {
+	},
+	"devDependencies": {
+		"ava": "latest",
+		"coveralls": "latest",
+		"husky": "latest",
+		"nyc": "latest",
+		"xo": "latest"
+	},
+	"nyc": {
+		"reporter": [
+			"lcov",
+			"text"
+		]
+	},
+	"xo": {
+		"esnext": true,
+		"semicolon": false,
+		"globals": [
+			"__dirname"
+		],
+		"rules": {
+			"no-console": 1,
+			"space-before-function-paren": 0,
+			"unicorn/filename-case": "pascalCase"
+		}
+	}
+}
