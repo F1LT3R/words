@@ -1,6 +1,6 @@
 # words
 
-> My wondrous module
+> words
 
 [![Build Status](https://travis-ci.org/F1LT3R/words.svg?branch=master)](https://travis-ci.org/F1LT3R/words)
 [![Coverage Status](https://coveralls.io/repos/github/F1LT3R/words/badge.svg?branch=master)](https://coveralls.io/github/F1LT3R/words?branch=master)
